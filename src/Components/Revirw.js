@@ -23,36 +23,6 @@ const Revirw = () => {
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-12 col-lg-10 col-xl-8">
                             <div className="card">
-                                {final.map((val, index) => {
-                                    return (
-                                        <div key={index} className="card-body">
-                                            <div className="d-flex flex-start align-items-center">
-                                                <img
-                                                    className="rounded-circle shadow-1-strong me-3"
-                                                    src="https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
-                                                    alt="avatar"
-                                                    width="60"
-                                                    height="60"
-                                                />
-                                                <div>
-                                                    <h6 className="fw-bold text-primary mb-1">
-                                                        {val.name}
-                                                    </h6>
-                                                    <p className="text-muted small mb-2">
-                                                        Date:-{crrdate}
-                                                    </p>
-                                                    <p className="text-muted small mb-2">
-                                                        Time:- {Time}
-                                                    </p>
-
-                                                    <p className="mt-3 mb-3 pb-2">
-                                                        {val.text}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
                                 <div
                                     className="card-footer py-3 border-0"
                                     style={{ backgroundColor: "#f8f9fa" }}>
@@ -107,6 +77,44 @@ const Revirw = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="col-8">
+                            {final.map((val, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className="card-body"
+                                        style={{
+                                            border: "2px solid #eee",
+                                            margin: "5px 0px 5px 0 ",
+                                        }}>
+                                        <div className="d-flex flex-start align-items-center">
+                                            <img
+                                                className="rounded-circle shadow-1-strong me-3"
+                                                src="https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                                                alt="avatar"
+                                                width="60"
+                                                height="60"
+                                            />
+                                            <div>
+                                                <h6 className="fw-bold text-primary mb-1">
+                                                    {val.name}
+                                                </h6>
+                                                <p className="text-muted small mb-2">
+                                                    Date:-{crrdate}
+                                                </p>
+                                                <p className="text-muted small mb-2">
+                                                    Time:- {Time}
+                                                </p>
+
+                                                <p className="mt-3 mb-3 pb-2">
+                                                    {val.text}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
